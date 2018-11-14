@@ -60,9 +60,8 @@
 
     <footer class="footer">
       <div class="container">
-        <p>
-          <a href="/api/tables">API Table Link</a> |
-          <a href="/api/waitlist">API Wait List</a>
+        <p><a href="/api/friends">API Friends List</a> |
+          <a href="https://github.com/Shahriar87/FriendFinder">GitHub Repo</a>
       </div>
     </footer>
 
@@ -97,6 +96,20 @@
 
     )
   };
+
+  $(".submit").on("click", function (event) {
+    event.preventDefault();
+    // GRAB DATA FOR NEW FRIEND ENTRY
+    var newFriend = {
+      customerName: $("#reserve-name").val().trim(),
+      phoneNumber: $("#reserve-phone").val().trim(),
+      customerEmail: $("#reserve-email").val().trim(),
+      customerID: $("#reserve-unique-id").val().trim()
+    };
+
+
+
+  });
 
 
 

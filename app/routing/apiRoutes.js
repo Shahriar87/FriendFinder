@@ -2,9 +2,13 @@ var friendsData = require("../data/friends");
 
 module.exports = function (app) {
 
+    // GET REQUEST TO SEND IN friendsData ARRAY OF OBJECT
+
     app.get("/api/friends", function (req, res) {
         res.json(friendsData);
     });
+
+    // POST REQUEST TO TAKE IN NEWLY ENTERED DATA AND PASS ALONG ANALYSED closestFriend OBJECT
 
     app.post("/api/friends", function (req, res) {
 

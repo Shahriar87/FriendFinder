@@ -7,6 +7,35 @@ module.exports = function (app) {
     });
 
     app.post("/api/friends", function (req, res) {
+
+        var counterScore = 50;
+        var newFriendScore = req.body.scores;
+        var closestFriend;
+
+
+        for (var i = 0; i < friendsData.length; i++) {
+
+            var currentFriendScore = friendsData[i].scores;
+            var totalScore = 0;
+
+
+            for (var j = 0; j < currentFriendScore.length; j++) {
+                totalScore += Math.abs(currentFriendScore[j] - newFriendScore[j]);
+            }
+
+            if (totalScore <= counterScore) {
+                counterScore = totalScore;
+                closestFriend = friendsData[i];
+            }
+        }
+
+        // console.log(friendsData);
+        // console.log("==============================================")
+        // console.log(req.body);
+        // console.log("==============================================")   
+        // console.log(res.json);
+
         friendsData.push(req.body);
+        res.json(closestFriend);
     });
 };

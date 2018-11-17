@@ -18,7 +18,7 @@
   <div class="container">
 
     <div class="jumbotron">
-      <h1 class="text-left"><span class="fa fa-child"></span>Friend Finder</h1>
+      <h1 class="text-left"><span class="fa fa-child"></span> Friend Finder</h1>
       <hr>
       <h2 class="text-left">
         Survey Questions
@@ -46,11 +46,14 @@
 
             </form>
           </div>
-          <div class="card-body questions">
+          <div class="card-body">
+            <div class="questions">
+            </div>
+            <br>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary submit" id="myBtn">Submit</button>
+            </div>
           </div>
-
-          <button type="submit" class="btn btn-primary submit" id="myBtn">Submit</button>
-
         </div>
       </div>
     </div>
@@ -110,9 +113,9 @@
   for (var i = 0; i < questionData.length; i++) {
     $(".questions").append(
 
-      "<div><h3><strong>Question " +
-      (i + 1) + "</strong></h3><h5>" + questionData[i] + "</h5><select class='chosen-select validate' id='q" + (i + 1)
-      + "'><option value=''></option><option value='1'>1 (Strongly Disagree)</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5 (Strongly Agree)</option></div>"
+      "<div class='my-3'><h3>Question " +
+      (i + 1) + "</h3><h5>" + questionData[i] + "</h5><select class='chosen-select validate' id='q" + (i + 1)
+      + "'><option value='' selected='selected'>select a value</option><option value='1'>1 (Strongly Disagree)</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5 (Strongly Agree)</option></div>"
     )
   };
 
@@ -188,18 +191,18 @@
       // SHOW MODAL
       modal.style.display = "block";
 
-      // $("#survey-name").val("");
-      // $("#survey-photo").val("");
-      // $("#q1").val("");
-      // $("#q2").val("");
-      // $("#q3").val("");
-      // $("#q4").val("");
-      // $("#q5").val("");
-      // $("#q6").val("");
-      // $("#q7").val("");
-      // $("#q8").val("");
-      // $("#q9").val("");
-      // $("#q10").val("");
+      $("#survey-name").val("");
+      $("#survey-photo").val("");
+      $("#q1").val("");
+      $("#q2").val("");
+      $("#q3").val("");
+      $("#q4").val("");
+      $("#q5").val("");
+      $("#q6").val("");
+      $("#q7").val("");
+      $("#q8").val("");
+      $("#q9").val("");
+      $("#q10").val("");
 
     } else {
       alert("Please fill out all fields!");

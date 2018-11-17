@@ -7,50 +7,9 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-  <style>
-    /* THE MODAL BACKGROUND */
-    .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    }
-
-    /* MODAL CONTENT BOX */
-    .modal-content {
-        background-color: #fefefe;
-        margin: 15% auto; /* 15% from the top and centered */
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%; /* Could be more or less, depending on screen size */
-    }
-
-    /* CLOSE BUTTON STYLE */
-    .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-    }
-  </style>
-
-
 
 </head>
 
@@ -67,7 +26,6 @@
       <br>
 
     </div>
-
 
     <div class="row">
       <div class="col-lg-12">
@@ -109,7 +67,7 @@
         </div>
         <div class="modal-body">
           <h2 id="friendName"></h2>
-          <img id="friendPhoto" alt="Closest Friend" style="width:600px; height:350px">
+          <img id="friendPhoto" alt="Closest Friend">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary close" data-dismiss="modal">Close</button>
@@ -230,18 +188,18 @@
       // SHOW MODAL
       modal.style.display = "block";
 
-      $("#survey-name").val("");
-      $("#survey-photo").val("");
-      $("#q1").val("");
-      $("#q2").val("");
-      $("#q3").val("");
-      $("#q4").val("");
-      $("#q5").val("");
-      $("#q6").val("");
-      $("#q7").val("");
-      $("#q8").val("");
-      $("#q9").val("");
-      $("#q10").val("");
+      // $("#survey-name").val("");
+      // $("#survey-photo").val("");
+      // $("#q1").val("");
+      // $("#q2").val("");
+      // $("#q3").val("");
+      // $("#q4").val("");
+      // $("#q5").val("");
+      // $("#q6").val("");
+      // $("#q7").val("");
+      // $("#q8").val("");
+      // $("#q9").val("");
+      // $("#q10").val("");
 
     } else {
       alert("Please fill out all fields!");
